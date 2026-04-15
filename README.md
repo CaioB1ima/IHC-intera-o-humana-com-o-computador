@@ -1,1 +1,0 @@
-# IHC-intera-o-humana-com-o-computador
