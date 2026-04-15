@@ -1,0 +1,298 @@
+/* Reset e Variáveis eMAG-Ready */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* eMAG: Contraste de cores (Visual 4.1) */
+    --primary: #c2185b; /* Rosa Escuro com bom contraste */
+    --primary-hover: #ad1457;
+    --primary-active: #880e4f;
+    --bg-light: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --text-main: #111827;
+    --text-muted: #374151; /* eMAG: Texto cinza com contraste reforçado */
+    --border: #d1d5db;
+    --info-bg: #fdf2f8;
+    --focus-outline: #2563eb; /* eMAG: Foco claro e distinto (Navegação 1.5) */
+}
+
+/* Base */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* eMAG: Atalhos de Navegação (Navegação 1.1) */
+#atalhos {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    background: #000;
+    z-index: 2000;
+}
+
+#atalhos ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+#atalhos a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+#atalhos a:focus {
+    position: static;
+    top: 0;
+    outline: 3px solid var(--focus-outline);
+}
+
+/* eMAG: Foco de teclado visível em todos os elementos (Navegação 1.5) */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: 3px solid var(--focus-outline);
+    outline-offset: 2px;
+}
+
+/* Layout */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+#main-header {
+    background: #fff;
+    border-bottom: 2px solid var(--border);
+    padding: 1rem 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* Menu Burger Icon */
+.menu-toggle {
+    background: none;
+    border: 1px solid var(--border);
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border-radius: 4px;
+}
+
+.menu-toggle .bar {
+    width: 20px;
+    height: 2px;
+    background: var(--text-main);
+}
+
+/* Hero Section */
+.hero {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+/* Form eMAG Compliance (Formulários 6.1) */
+.search-form {
+    max-width: 400px;
+    margin: 0 auto 3rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.875rem;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+}
+
+/* Info Box */
+.info-box {
+    background: var(--info-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 6px solid var(--primary);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.info-box p {
+    font-size: 1rem;
+    color: #831843;
+}
+
+/* Sobre Section */
+.about-section {
+    padding: 4rem 0;
+    background: var(--bg-secondary);
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: center;
+}
+
+.text-content, .image-content {
+    flex: 1 1 300px;
+}
+
+.btn-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.rounded-img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* eMAG: Navegação de Rodapé (Navegação 1.6) */
+#main-footer {
+    background: #fff;
+    border-top: 2px solid var(--border);
+    padding: 1rem 0 2rem;
+    margin-top: 4rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1rem;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: var(--text-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    gap: 4px;
+}
+
+.nav-item.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+}
+
+.footer-legal {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+}
+
+/* eMAG: Responsividade (Visual 4.2) */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #main-footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    main {
+        padding-bottom: 100px;
+    }
+}
+
+/* eMAG: Ocultar visualmente mas manter para leitores de tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
